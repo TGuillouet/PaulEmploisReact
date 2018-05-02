@@ -1,0 +1,138 @@
+.home-container {
+    width: 100%;
+    height: 100vh;
+    background-image: url('./../Imgs/fond-site-V2.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page {
+    width: 80%;
+    height: 100%;
+    position: relative;
+}
+
+.homeSearch {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeSearch input {
+    width: 80%;
+    height: 6%;
+    margin-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.homeSearch button {
+    font-size: 17px;
+    width: auto;
+    margin-right: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #28a745;
+    background-color: rgba(0, 0, 0, 0);
+    color: #28a745;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.homeSearch button:hover {
+    background-color: #28a745;
+    color: #FFFFFF;
+}
+
+.tagsContainer {
+    position: absolute;
+    background-color: #FFFFFF;
+    border: 1px solid #ced4da;
+    border-radius: 15px 15px 0px 0px;
+    bottom: 0;
+    width: 99%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    justify-content: center;    
+    flex-wrap: wrap;
+}
+
+.homeLink {
+    margin: 15px;
+    padding: 6px;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeLink:visited {
+    text-decoration: none;
+}
+
+.blue {
+    color: #257398;
+    background-color: #D1ECF1;
+}
+
+.badge {
+    margin-left: 10px;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* Laptop */
+
+@media screen and (max-width: 1024px) {
+    .homeSearch button {
+        padding: 9px;
+    }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 425px) {
+    .page {
+        width: 100%;
+    }
+    .homeSearch input {
+        padding: 6px;
+    }
+    .homeSearch button {
+        margin: 0;
+    }
+    .tagsContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: 40%;
+        flex-wrap: nowrap;
+        overflow-y: scroll;
+    }
+    .homeLink {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        width:90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-height: 400px) {
+    .homeSearch input {
+        height: 11%;
+    }
+}

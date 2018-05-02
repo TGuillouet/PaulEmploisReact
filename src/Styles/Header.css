@@ -1,0 +1,166 @@
+header {
+    position: fixed;
+    display: flex;
+    background-color: #F8F9FA;
+    padding: 0px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    width: 100%;
+    max-height: 50px;
+    
+        transition: 0.5s;
+    z-index: 2;
+}
+
+.burger {
+    position: absolute;
+    font-size: 35px;
+    display: none;
+    top:0;
+    right: 0;
+    margin : 5px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff; 
+    border: 1px solid #ced4da;
+    border-radius: 10%;
+}
+
+.burger:focus {
+    outline: none;
+}
+
+.headerSearch {
+    width: 25%;   
+    display: flex;
+    align-items: center; 
+}
+
+.headerSearch input {
+    width:80%;
+    height: 70%;
+    margin-right: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+.headerSearch button {
+    font-size: 17px;
+    width: 13%;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #28a745;
+    background-color: rgba(0, 0, 0, 0);
+    color: #28a745;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.headerSearch button:hover {
+    background-color: #28a745;
+    color: #FFFFFF;
+}
+
+header nav {
+    display: flex;
+    width: 100%;
+    padding-left: 15px;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+header li {
+    margin-right: 10px;
+}
+
+header .logo {
+    width: 50px;
+}
+
+.headerLink {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Laptop */
+@media screen and (max-width: 1024px) {
+    header nav {
+        width: 75%;
+    }
+
+    .headerSearch button {
+        font-size: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 17%;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .headerSearch {
+        width: 28%;
+    }
+
+    .headerSearch button {
+        width: 20%;
+    }
+
+    .headerSearch input {
+        width: 65%;
+    }
+}
+
+/* Mobile  */
+@media screen and (max-width: 425px) {
+    .burger {
+        display: block;
+    }
+
+    header ul {
+        align-self: flex-start;
+        flex-direction: column; 
+        justify-content: center;
+        display: none;
+    }
+
+    header li {
+        margin: 10px;
+        text-align: center;
+    }
+
+    header {
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 50px; 
+        align-items: center;
+    }
+
+    header nav {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .headerSearch {
+        display: none;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .headerSearch input {
+        height: 35px;;
+    }
+}
+
+@media screen and (max-height: 425px) {
+    
+}
